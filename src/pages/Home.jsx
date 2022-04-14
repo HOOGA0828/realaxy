@@ -37,7 +37,7 @@ const BG7 = styled.div`
 `
 export default function Home () {
     return (<>
-        <BG1></BG1>
+        <BG1>123</BG1>
         <BG2></BG2>
         <BG3></BG3>
         <BG4></BG4>
