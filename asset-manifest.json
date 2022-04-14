@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/reglaxyDEMO/static/css/main.ef1fe3bf.css",
+    "main.js": "/reglaxyDEMO/static/js/main.3bf3df8f.js",
+    "static/media/regalaxy_LOGO.png": "/reglaxyDEMO/static/media/regalaxy_LOGO.11b8b8d71058f9c452ea.png",
+    "static/media/icon_side_05.png": "/reglaxyDEMO/static/media/icon_side_05.75e2adc2ddfadbda6049.png",
+    "static/media/icon_side_04.png": "/reglaxyDEMO/static/media/icon_side_04.3b8440d3d459bc616786.png",
+    "index.html": "/reglaxyDEMO/index.html",
+    "main.ef1fe3bf.css.map": "/reglaxyDEMO/static/css/main.ef1fe3bf.css.map",
+    "main.3bf3df8f.js.map": "/reglaxyDEMO/static/js/main.3bf3df8f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef1fe3bf.css",
+    "static/js/main.3bf3df8f.js"
+  ]
+}
