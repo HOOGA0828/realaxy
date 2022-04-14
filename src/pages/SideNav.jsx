@@ -36,6 +36,10 @@ const Wrapper = styled.ul`
   a{
       text-decoration:none;
   }
+  @media(max-width: 768px){
+    position:absolute;
+    left:-100px;
+  }
 `;
 export default function SideNav() {
   const pathName = useLocation().pathname;

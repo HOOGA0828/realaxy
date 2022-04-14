@@ -29,7 +29,9 @@ const ContentWrapper = styled.div`
 const PageWrapper = styled.div`
 /* 減去側邊sidNav */ 
     width: calc(100vw - 100px);
-
+    @media(max-width: 768px){
+      width: 100%;
+    }
 `
 const AA = styled.div`
   height: 200vh;
