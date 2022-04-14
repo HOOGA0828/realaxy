@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useState, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 // icon
@@ -31,7 +32,6 @@ const Wrapper = styled.ul`
   p {
     text-align: center;
     font-weight:bold;
-    ${({focus}) => focus ? "color:red" : "color: black"}
   }
   a{
       text-decoration:none;
@@ -39,43 +39,42 @@ const Wrapper = styled.ul`
 `;
 export default function SideNav() {
   const pathName = useLocation().pathname;
-    console.log(pathName)
   return (
     <Wrapper>
       <Link to="/home">
         <li>
           <img src={icon1} alt="" />
-          <p focus={(+pathName === "/home")}>首頁</p>
+          <p style={pathName === "/home" ? {color: "rgb(3,192,255)"} : {color: "black"}}>首頁</p>
         </li>
       </Link>
       <Link to="/game">
         <li>
           <img src={icon2} alt="" />
-          <p focus={+(pathName === "/game")}>遊戲</p>
+          <p style={pathName === "/game" ? {color: "rgb(3,192,255)"} : {color: "black"}}>遊戲</p>
         </li>
       </Link>
       <Link to="/map">
         <li>
           <img src={icon3} alt="" />
-          <p focus={+(pathName === "/map")}>地圖</p>
+          <p style={pathName === "/map" ? {color: "rgb(3,192,255)"} : {color: "black"}}>地圖</p>
         </li>
       </Link>
       <Link to="/market">
         <li>
           <img src={icon4} alt="" />
-          <p focus={+(pathName === "/market")}>市場</p>
+          <p style={pathName === "/market" ? {color: "rgb(3,192,255)"} : {color: "black"}}>市場</p>
         </li>
       </Link>
       <Link to="/community">
         <li>
           <img src={icon5} alt="" />
-          <p focus={+(pathName === "/community")}>社群</p>
+          <p style={pathName === "/community" ? {color: "rgb(3,192,255)"} : {color: "black"}}>社群</p>
         </li>
       </Link>
       <Link to="/groupBuy">
         <li>
           <img src={icon6} alt="" />
-          <p focus={+(pathName === "/groupBuy")}>團購</p>
+          <p style={pathName === "/groupBuy" ? {color: "rgb(3,192,255)"} : {color: "black"}}>團購</p>
         </li>
       </Link>
     </Wrapper>

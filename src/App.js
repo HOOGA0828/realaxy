@@ -12,7 +12,7 @@ import Game from "pages/Game";
 import GroupBuy from "pages/GroupBuy";
 import Map from "pages/Map";
 import Market from "pages/Market";
-import Home from "pages/Home"
+import Home from "pages/Home";
 import Community from "pages/Community";
 // 多語言套件
 import { IntlProvider } from "react-intl";
@@ -26,6 +26,11 @@ export const appContext = createContext();
 const ContentWrapper = styled.div`
   display: flex;
 `;
+const PageWrapper = styled.div`
+/* 減去側邊sidNav */ 
+    width: calc(100vw - 100px);
+
+`
 const AA = styled.div`
   height: 200vh;
 `;
@@ -72,16 +77,17 @@ function App() {
           <Header />
           <ContentWrapper>
             <SideNav />
-            <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/game" element={<Game />} />
-          <Route path="/map" element={<Map />} />
-          <Route path="/market" element={<Market />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/groupBuy" element={<GroupBuy />} />
-          <Route path="/" element={<Home />} />
-            
-            </Routes>
+            <PageWrapper>
+              <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/game" element={<Game />} />
+                <Route path="/map" element={<Map />} />
+                <Route path="/market" element={<Market />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/groupBuy" element={<GroupBuy />} />
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </PageWrapper>
           </ContentWrapper>
         </IntlProvider>
       </ThemeProvider>
