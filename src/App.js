@@ -37,7 +37,7 @@ const AA = styled.div`
   height: 200vh;
 `;
 function App() {
-  // 多語言切換
+  // 多語言切換---------------------------------
   const [lang, setLang] = useState(zhTW);
   const [locale, setLocale] = useState("zh-TW");
   // 取得語言包
@@ -59,6 +59,9 @@ function App() {
         break;
     }
   };
+  //--------------------------------------------
+  // menu icon 點選狀態
+  const [isMenu, setIsMenu] = useState(false);
   useEffect(() => {
     const locale = window.navigator.language;
     setLocale(locale);
@@ -69,7 +72,7 @@ function App() {
   }, [locale]);
   // context
   const theContext = {
-    setLocale,
+    setLocale,isMenu,setIsMenu
   };
 
   return (

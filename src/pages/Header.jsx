@@ -5,7 +5,8 @@ import styled from "@emotion/styled";
 import useClickOutsideDetector from "hook/useClickOutsideDetector";
 //img
 import logo from "img/logo/regalaxy_LOGO.png";
-import menu from "img/icon/menu_normal.png";
+import menuNormal from "img/icon/menu_normal.png";
+import menuPressed from "img/icon/menu_pressed.png";
 //icon
 import cart from "img/icon/cart.png";
 import coin from "img/icon/coin.png";
@@ -13,9 +14,8 @@ import diamond from "img/icon/diamond.png";
 import positive from "img/icon/positive.png";
 import { Check } from "@emotion-icons/bootstrap/Check";
 //component
-import SideNav from "pages/SideNav";
 
-// constext
+// context
 import { appContext } from "App.js";
 const Wrapper = styled.div`
   width: 100%;
@@ -25,19 +25,46 @@ const Wrapper = styled.div`
   justify-content: space-between;
   position: sticky;
   top: 0;
+  z-index:50;
   img {
     max-width: 100%;
     max-height: 100%;
   }
+  @media (max-width: 768px) {
+    height: 40px;
+  }
 `;
 const Left = styled.div`
-  display: flex;
+  display: none;
+  @media (max-width: 768px){
+    display: flex;
+  }
 `;
 const MenuImg = styled.div`
   display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+  }
+`;
+const Middle = styled.div`
+  img {
+    width: 100px;
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 60px;
+    }
+  }
 `;
 const LogoImg = styled.div`
   min-width: 115px;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 const Right = styled.div`
   display: flex;
@@ -47,13 +74,16 @@ const Money = styled.div`
   grid-template-columns: 1fr 1fr;
   div {
     display: flex;
-    align-self: center;
+    align-items: center;
     margin: 0 10px;
     p {
       margin: 0 3px;
       line-height: 33px;
       font-size: ${({ theme }) => theme.font.size.header};
     }
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 const Chosen = styled.div`
@@ -69,6 +99,19 @@ const Chosen = styled.div`
   img {
     width: 33px;
     height: 33px;
+  }
+  @media (max-width: 768px) {
+    width: 50px;
+    img {
+      width: 28px;
+      height: 28px;
+    }
+    :nth-of-type(3) {
+      display: none;
+    }
+    :nth-of-type(4) {
+      display: none;
+    }
   }
 `;
 const LanList = styled.ul`
@@ -102,7 +145,7 @@ const parseLang = (lang) => {
   }
 };
 export default function Header() {
-  const { setLocale } = useContext(appContext);
+  const { setLocale, isMenu, setIsMenu } = useContext(appContext);
   // 語言選擇處理
   const [changeLan, setChangeLan] = useState(false);
   const [langText, setLangText] = useState("zh-TW");
@@ -118,13 +161,20 @@ export default function Header() {
     <Wrapper>
       {/* 左邊區塊 */}
       <Left>
-        <MenuImg>
-          <img src={menu} alt="" />
+        <MenuImg
+          onClick={() => {
+            setIsMenu(!isMenu);
+          }}
+        >
+          <img src={isMenu ? menuNormal : menuPressed} alt="" />
         </MenuImg>
+      </Left>
+      {/* 中間logo */}
+      <Middle>
         <LogoImg>
           <img src={logo} alt="" />
         </LogoImg>
-      </Left>
+      </Middle>
       {/* 右邊區塊 */}
       <Right>
         <Money>
