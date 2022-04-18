@@ -7,8 +7,16 @@ import discord from "img/icon/global/discord.webp";
 import telegram from "img/icon/global/telegram.webp";
 import medium from "img/icon/global/medium.webp";
 const Wrapper = styled.div`
+  /* 蓋掉上方白皮書跑掉的px */
+  margin-top: -8px;
+  /* ------------------  */
   width: 100%;
   background: rgb(52, 79, 88);
+  z-index: 5;
+  position: relative;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 const Container = styled.div`
   max-width: 1120px;
@@ -46,15 +54,15 @@ const LinkWrapper = styled.div`
   }
 `;
 const About = styled.ul`
-  /* <row-start> / <column-start> / <row-end> / <column-end> */
   > div {
     display: grid;
   }
   @media (max-width: 768px) {
+    /* <row-start> / <column-start> / <row-end> / <column-end> */
     grid-area: 1/1/2/3;
-    >div{
-        grid-template-columns:100px 100px;
-        justify-content:center;
+    > div {
+      grid-template-columns: 100px 100px;
+      justify-content: center;
     }
   }
 `;
@@ -103,9 +111,9 @@ const Footer = styled.div`
 const Copyright = styled.p`
   color: white;
   margin: 15px 0;
-  @media (max-width: 768px){
-      margin: 10px auto;
-      font-size: ${({ theme }) => theme.font768.size.primary};
+  @media (max-width: 768px) {
+    margin: 10px auto;
+    font-size: ${({ theme }) => theme.font768.size.primary};
   }
 `;
 const SocialLink = styled.div`
@@ -116,14 +124,14 @@ const SocialLink = styled.div`
     height: 40px;
     margin: 0 8px;
   }
-  @media (max-width: 768px){
-      justify-content:center;
-      grid-area: 1/1/2/2;
-      img{
-          width:25px;
-          height:25px;
-          margin: 10px;
-      }
+  @media (max-width: 768px) {
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    img {
+      width: 25px;
+      height: 25px;
+      margin: 10px;
+    }
   }
 `;
 export default function HomeFooter() {

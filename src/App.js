@@ -33,9 +33,7 @@ const PageWrapper = styled.div`
       width: 100%;
     }
 `
-const AA = styled.div`
-  height: 200vh;
-`;
+
 function App() {
   // 多語言切換---------------------------------
   const [lang, setLang] = useState(zhTW);

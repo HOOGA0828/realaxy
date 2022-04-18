@@ -1,4 +1,4 @@
-import { createTheme, rgbToHex } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 let theme01 = {
   font: {
@@ -14,6 +14,7 @@ let theme01 = {
   },
   font768:{
     size:{
+      homeTitle:"28px",
       title:"18px",
       big:"16px",
       primary:"14px",
@@ -23,6 +24,12 @@ let theme01 = {
   bgc: {
     color: {
         header:"rgb(253,253,253)"
+    },
+  },
+  button:{
+    background: {
+      home_header:"#b95ee6",
+      home_create:"rgb(255,205,0)"
     },
   },
 };
