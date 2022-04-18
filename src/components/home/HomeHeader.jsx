@@ -71,6 +71,7 @@ const ArticleWrapper = styled.div`
     position: relative;
     h4{
       font-size: ${({ theme }) => theme.font768.size.homeTitle};
+      margin-top:10px;
     }
     h1{
       font-size: ${({ theme }) => theme.font768.size.primary};
