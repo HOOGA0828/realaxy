@@ -1,16 +1,28 @@
 {
   "files": {
     "main.css": "/realaxy/static/css/main.ef1fe3bf.css",
-    "main.js": "/realaxy/static/js/main.ff44d1e9.js",
+    "main.js": "/realaxy/static/js/main.08af4d3a.js",
     "static/media/regalaxy_LOGO.png": "/realaxy/static/media/regalaxy_LOGO.11b8b8d71058f9c452ea.png",
+    "static/media/header.png": "/realaxy/static/media/header.77a77e409c67c4536965.png",
+    "static/media/road_bg.png": "/realaxy/static/media/road_bg.96940b48809298172949.png",
+    "static/media/create.png": "/realaxy/static/media/create.7af27e26c94073e70609.png",
+    "static/media/what.png": "/realaxy/static/media/what.6dfe3caada3fd3fd3419.png",
+    "static/media/road.png": "/realaxy/static/media/road.6c4cc462f7c5c07bac35.png",
+    "static/media/create_bg.png": "/realaxy/static/media/create_bg.5339a151485ff925e87e.png",
+    "static/media/what_bg.png": "/realaxy/static/media/what_bg.eeafdc043281598fac3b.png",
     "static/media/icon_side_05.png": "/realaxy/static/media/icon_side_05.75e2adc2ddfadbda6049.png",
     "static/media/icon_side_04.png": "/realaxy/static/media/icon_side_04.3b8440d3d459bc616786.png",
+    "static/media/telegram.webp": "/realaxy/static/media/telegram.9f7bd127afd54271b8e4.webp",
+    "static/media/facebook.webp": "/realaxy/static/media/facebook.23b9281010f11ca0df85.webp",
+    "static/media/discord.webp": "/realaxy/static/media/discord.03128fa240dc8a09b053.webp",
+    "static/media/medium.webp": "/realaxy/static/media/medium.ff57a734f98992d24ef0.webp",
+    "static/media/twitter.webp": "/realaxy/static/media/twitter.4432ee246c2767b79c4e.webp",
     "index.html": "/realaxy/index.html",
     "main.ef1fe3bf.css.map": "/realaxy/static/css/main.ef1fe3bf.css.map",
-    "main.ff44d1e9.js.map": "/realaxy/static/js/main.ff44d1e9.js.map"
+    "main.08af4d3a.js.map": "/realaxy/static/js/main.08af4d3a.js.map"
   },
   "entrypoints": [
     "static/css/main.ef1fe3bf.css",
-    "static/js/main.ff44d1e9.js"
+    "static/js/main.08af4d3a.js"
   ]
 }
