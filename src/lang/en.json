@@ -1,3 +1,8 @@
 {
-    "test": "hellow"
+    "sideNav1":"Home",
+    "sideNav2":"Game",
+    "sideNav3":"Map",
+    "sideNav4":"Market",
+    "sideNav5":"Community",
+    "sideNav6":"Group buy"
 }

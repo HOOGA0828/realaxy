@@ -13,7 +13,7 @@ import coin from "img/icon/coin.png";
 import diamond from "img/icon/diamond.png";
 // context
 import { appContext } from "App";
-
+import { FormattedMessage } from "react-intl";
 const Wrapper = styled.ul`
   width: 100px;
   height: calc(100vh - 80px);
@@ -33,7 +33,7 @@ const Wrapper = styled.ul`
   img {
     width: 50px;
     height: 50px;
-    margin: 15px 0 0;
+    margin: 15px auto 0;
   }
   p {
     text-align: center;
@@ -116,7 +116,7 @@ export default function SideNav() {
                 : { color: "black" }
             }
           >
-            首頁
+            <FormattedMessage id="sideNav1" />
           </p>
         </li>
       </Link>
@@ -130,7 +130,7 @@ export default function SideNav() {
                 : { color: "black" }
             }
           >
-            遊戲
+            <FormattedMessage id="sideNav2" />
           </p>
         </li>
       </Link>
@@ -144,7 +144,7 @@ export default function SideNav() {
                 : { color: "black" }
             }
           >
-            地圖
+            <FormattedMessage id="sideNav3" />
           </p>
         </li>
       </Link>
@@ -158,7 +158,7 @@ export default function SideNav() {
                 : { color: "black" }
             }
           >
-            市場
+            <FormattedMessage id="sideNav4" />
           </p>
         </li>
       </Link>
@@ -172,7 +172,7 @@ export default function SideNav() {
                 : { color: "black" }
             }
           >
-            社群
+            <FormattedMessage id="sideNav5" />
           </p>
         </li>
       </Link>
@@ -186,7 +186,7 @@ export default function SideNav() {
                 : { color: "black" }
             }
           >
-            團購
+            <FormattedMessage id="sideNav6" />
           </p>
         </li>
       </Link>

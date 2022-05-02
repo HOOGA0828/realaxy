@@ -14,7 +14,7 @@ import HomeFooter from "components/home/HomeFooter"
 export default function Home () {
     return (<>
         <HomeHeader/>
-        <HomeSell/>
+        {/* <HomeSell/> */}
         <HomeWhat/>
         <HomeCreate/>
         <HomeSocial/>
